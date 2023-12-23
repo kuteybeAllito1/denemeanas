@@ -6,6 +6,7 @@ import 'package:swift_chat/GirisEkrani.dart';
 import 'package:swift_chat/GrupSohbetAna.dart';
 import 'package:swift_chat/Methods.dart';
 import 'package:swift_chat/SohbetOdasi.dart';
+import 'package:swift_chat/group_chats/group_chat_screen.dart';
 
 class AnaEkran extends StatefulWidget {
   const AnaEkran({Key? key}) : super(key: key);
@@ -172,13 +173,14 @@ class _AnaEkranState extends State<AnaEkran> with WidgetsBindingObserver {
                   Container(),
               ],
             ),
-            floatingActionButton: FloatingActionButton(
-              child: Icon(Icons.group),
-              onPressed: () =>Navigator.of(context).push(MaterialPageRoute(builder: 
-              (_) => GrubSohbetAna(),
-              ),
-             ),
-            ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.group),
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => GroupChatHomeScreen(),
+          ),
+        ),
+      ),
     );
   }
 }
